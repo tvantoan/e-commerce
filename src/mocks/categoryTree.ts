@@ -1,0 +1,177 @@
+const categoryTree = [
+  {
+    id: 1,
+    name: "Gia dụng nhà bếp",
+    url: "gia-dung-nha-bep",
+    subcategories: [
+      { id: 4, name: "Nồi chiên không dầu", url: "noi-chien-khong-dau" },
+      {
+        id: 5,
+        name: "Nồi cơm điện",
+        url: "noi-com-dien",
+        subcategories: [
+          { id: 51, name: "Nồi cơm điện mini", url: "noi-com-dien-mini" },
+          { id: 52, name: "Nồi cơm điện cao tần", url: "noi-com-dien-cao-tan" },
+          { id: 53, name: "Nồi cơm điện tử", url: "noi-com-dien-tu" },
+          {
+            id: 54,
+            name: "Nồi cơm nắp rời/nắp gài",
+            url: "noi-com-nap-roi-nap-gai",
+          },
+        ],
+      },
+      { id: 6, name: "Máy làm sữa hạt", url: "may-lam-sua-hat" },
+      {
+        id: 7,
+        name: "Máy ép trái cây",
+        url: "may-ep-trai-cay",
+        subcategories: [
+          { id: 55, name: "Máy ép chậm", url: "may-ep-cham" },
+          { id: 56, name: "Máy ép nhanh", url: "may-ep-nhanh" },
+          { id: 57, name: "Máy ép cam", url: "may-ep-cam" },
+        ],
+      },
+      {
+        id: 8,
+        name: "Máy xay sinh tố",
+        url: "may-xay-sinh-to",
+        subcategories: [
+          {
+            id: 81,
+            name: "Máy xay sinh tố đa năng",
+            url: "may-xay-sinh-to-da-nang",
+          },
+          {
+            id: 82,
+            name: "Máy xay sinh tố cầm tay",
+            url: "may-xay-sinh-to-cam-tay",
+          },
+        ],
+      },
+      { id: 9, name: "Lò vi sóng", url: "lo-vi-song" },
+      { id: 10, name: "Ấm siêu tốc", url: "am-sieu-toc" },
+      { id: 11, name: "Máy rửa chén", url: "may-rua-chen" },
+      {
+        id: 12,
+        name: "Bếp điện",
+        url: "bep-dien",
+        subcategories: [
+          { id: 121, name: "Bếp từ", url: "bep-tu" },
+          { id: 122, name: "Bếp hồng ngoại", url: "bep-hong-ngoai" },
+        ],
+      },
+      { id: 13, name: "Nồi lẩu điện", url: "noi-lau-dien" },
+      { id: 14, name: "Nồi áp suất", url: "noi-ap-suat" },
+      { id: 15, name: "Nồi nấu chậm", url: "noi-nau-cham" },
+    ],
+  },
+  {
+    id: 2,
+    name: "Sức khỏe và làm đẹp",
+    url: "suc-khoe-lam-dep",
+    subcategories: [
+      {
+        id: 16,
+        name: "Máy massage",
+        url: "may-massage",
+        subcategories: [
+          { id: 58, name: "Súng massage", url: "sung-massage" },
+          {
+            id: 59,
+            name: "Máy massage cổ vai gáy",
+            url: "may-massage-co-vai-gay",
+          },
+          { id: 60, name: "Máy massage chân", url: "may-massage-chan" },
+          { id: 61, name: "Máy massage mắt", url: "may-massage-mat" },
+          { id: 62, name: "Máy massage lưng", url: "may-massage-lung" },
+          { id: 63, name: "Máy massage đầu", url: "may-massage-dau" },
+          { id: 64, name: "Máy massage mặt", url: "may-massage-mat-2" },
+        ],
+      },
+      { id: 17, name: "Máy tăm nước", url: "may-tam-nuoc" },
+      { id: 18, name: "Bàn chải điện", url: "ban-chai-dien" },
+      { id: 19, name: "Máy rửa mặt", url: "may-rua-mat" },
+      { id: 20, name: "Máy sấy tóc", url: "may-say-toc" },
+      { id: 21, name: "Máy đo huyết áp", url: "may-do-huyet-ap" },
+      { id: 22, name: "Cân sức khoẻ", url: "can-suc-khoe" },
+      { id: 23, name: "Máy cạo râu", url: "may-cao-rau" },
+      { id: 24, name: "Tông đơ cắt tóc", url: "tong-do-cat-toc" },
+    ],
+  },
+  {
+    id: 3,
+    name: "Thiết bị gia đình",
+    url: "thiet-bi-gia-dinh",
+    subcategories: [
+      {
+        id: 25,
+        name: "Máy hút bụi",
+        url: "may-hut-bui",
+        subcategories: [
+          { id: 35, name: "Robot hút bụi", url: "robot-hut-bui" },
+          { id: 36, name: "Máy hút bụi cầm tay", url: "cam-tay" },
+          {
+            id: 37,
+            name: "Máy hút bụi giường nệm",
+            url: "may-hut-bui-giuong-nem",
+          },
+          { id: 38, name: "Phụ kiện", url: "phu-kien" },
+        ],
+      },
+      {
+        id: 26,
+        name: "Máy lọc không khí",
+        url: "may-loc-khong-khi",
+        subcategories: [
+          { id: 39, name: "Máy lọc không khí ô tô", url: "o-to" },
+          { id: 40, name: "Máy lọc không khí tạo ẩm", url: "tao-am" },
+          {
+            id: 41,
+            name: "Máy lọc không khí hút ấm",
+            url: "hut-am",
+          },
+          { id: 42, name: "Lõi lọc không khí", url: "loi-loc-khong-khi" },
+        ],
+      },
+    ],
+  },
+  { id: 27, name: "Máy hút ẩm", url: "may-hut-am" },
+  {
+    id: 28,
+    name: "Quạt",
+    url: "quat",
+    subcategories: [
+      { id: 43, name: "Quạt hộp", url: "quat-hop" },
+      { id: 44, name: "Quạt tháp", url: "quat-thap" },
+      { id: 45, name: "Quạt cây", url: "quat-cay" },
+      { id: 46, name: "Quạt hơi nước", url: "quat-hoi-nuoc" },
+      { id: 47, name: "Quạt tích điện", url: "quat-tich-dien" },
+      { id: 48, name: "Quạt thông minh", url: "quat-thong-minh" },
+      { id: 49, name: "Quạt không cánh", url: "quat-khong-canh" },
+      { id: 50, name: "Quạt mini", url: "quat-mini" },
+    ],
+  },
+  { id: 29, name: "Máy hút bụi cầm tay", url: "may-hut-bui-cam-tay" },
+  { id: 30, name: "TV Box", url: "tv-box" },
+  { id: 31, name: "Máy chiếu", url: "may-chieu" },
+  {
+    id: 32,
+    name: "Máy Sưởi - Quạt Sưởi",
+    url: "may-suoi-quat-suoi",
+    subcategories: [
+      { id: 65, name: "Máy sưởi dầu", url: "may-suoi-dau" },
+      { id: 66, name: "Máy sưởi gốm", url: "may-suoi-gom" },
+      { id: 67, name: "Máy sưởi mini", url: "may-suoi-mini" },
+    ],
+  },
+  {
+    id: 33,
+    name: "Bàn ủi",
+    url: "ban-ui",
+    subcategories: [
+      { id: 331, name: "Bàn ủi hơi nước", url: "ban-ui-hoi-nuoc" },
+      { id: 332, name: "Bàn ủi khô", url: "ban-ui-kho" },
+    ],
+  },
+  { id: 34, name: "Chăm sóc thú cưng", url: "cham-soc-thu-cung" },
+];
